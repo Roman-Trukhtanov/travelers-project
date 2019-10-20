@@ -1,7 +1,7 @@
 .company {
 	position: absolute;
 	left: 0;
-	top: vh(326);
+	top: vh(330);
 	width: 100%;
 
 	@include mobile {
@@ -30,7 +30,7 @@
 
 .company__name {
 	margin: 0;
-	margin-bottom: vw(5);
+	margin-bottom: vw(11);
 	font-family: $font-family-bunny;
 	font-weight: 700;
 	font-size: vw(96);
