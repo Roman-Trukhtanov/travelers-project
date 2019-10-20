@@ -1,0 +1,52 @@
+.preloader {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background-color: $color-mine-shaft;
+	opacity: 1;
+}
+
+.preloader__loader-line {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: vw(4);
+	background-color: $color-corn;
+
+	@include mobile {
+		height: vmin(2);
+	}
+}
+
+.preloader__logo {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	display: block;
+	width: vw(180);
+	height: vw(180);
+	transform: translate(-50%, -60%);
+
+	@include mobile {
+		width: vmin(120);
+		height: vmin(120);
+	}
+}
+
+.preloader__logo-svg {
+	width: 100%;
+	height: 100%;
+	animation: rotateLogo 4s linear 0s infinite normal;
+}
+
+@keyframes rotateLogo {
+	to {
+		transform: rotate(360deg);
+	}
+}

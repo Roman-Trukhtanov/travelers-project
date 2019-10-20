@@ -2,7 +2,25 @@ extends pug/base
 
 prepend vars
 	- title = 'Travelers'
-	- description = 'Travelers - обзорный проект курса "Figma для верстальщика"'
+	- description = 'Travelers - обзорный проект курса "Figma для верстальщика. Как анимировать интерфейсы."'
+
+append vars
+	- link.appleTouchIcon120x120 = '/apple-touch-icon.png'
+	- link.icon16x16 = '/favicon-16x16.png'
+	- link.icon32x32 = '/favicon-32x32.png'
+	- link.manifest = '/site.webmanifest'
+	- link.maskIcon.href = '/safari-pinned-tab.svg'
+	- link.maskIcon.color = '#ffd600'
+	- meta.msapplicationTileColor = '#222222'
+	- meta.themeColor = '#222222'
 
 block content
-	.site-container
+	include pug/components/preloader
+	include pug/components/mobile-cover
+
+	.screen-container
+		include pug/components/page-header
+		include pug/components/page-main
+		include pug/components/lines
+		include pug/components/move-on
+		include pug/components/page-footer

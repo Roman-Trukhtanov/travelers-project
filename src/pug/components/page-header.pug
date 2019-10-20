@@ -1,0 +1,42 @@
+header.page-header.is-hidden
+	.page-header__wrap.container
+		.page-header__logo.main-logo
+			+svg('main-logo').main-logo__svg.main-logo__svg--clockwise
+
+		nav.page-header__nav.main-nav
+			.main-nav__wrap
+				.main-nav__col
+					+mainNavList([{
+						name: 'head',
+						link: '#',
+					},
+					{
+						name: 'about',
+						link: '#',
+					},
+					{
+						name: 'team',
+						link: '#',
+					},
+					{
+						name: 'tours',
+						link: '#',
+					}])
+
+				.main-nav__col
+					+mainNavList([{
+						name: 'gallery',
+						link: '#',
+					},
+					{
+						name: 'prices',
+						link: '#',
+					},
+					{
+						name: 'events',
+						link: '#',
+					},
+					{
+						name: 'contacts',
+						link: '#',
+					}])

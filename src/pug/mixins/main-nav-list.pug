@@ -1,0 +1,11 @@
+mixin mainNavList(items)
+	ul.main-nav__list&attributes(attributes)
+		each item in items
+			if item.isActive
+				li.main-nav__item.main-nav__item--active
+					a.main-nav__link
+						span.main-nav__link-text= item.name
+			else
+				li.main-nav__item
+					a.main-nav__link(href=item.link)
+						span.main-nav__link-text= item.name

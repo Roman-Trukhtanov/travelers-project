@@ -1,0 +1,138 @@
+.move-on {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+}
+
+.move-on__btn-wrap {
+	position: absolute;
+	left: 0;
+	bottom: vh(80);
+	overflow: hidden;
+	width: vh(60);
+	height: vh(60);
+	transform: translateX(-50%);
+}
+
+.move-on__btn {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: vw(1) solid rgba($color-white, 0.75);
+	border-radius: 50%;
+	padding: 0;
+	width: vh(60);
+	height: vh(60);
+	color: $color-mine-shaft;
+	background-color: transparent;
+	cursor: pointer;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		z-index: -1;
+		display: block;
+		border-radius: 50%;
+		transform: translate(-50%, -50%);
+		transition: opacity 0.25s;
+	}
+
+	&::before {
+		width: vh(40);
+		height: vh(40);
+		background-color: $color-white;
+	}
+
+	&::after {
+		width: 0;
+		height: 0;
+		background-color: lighten($color-yellow, 3);
+		transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
+	}
+
+	&:focus,
+	&:hover {
+		outline: none;
+
+		&::after {
+			width: vh(40);
+			height: vh(40);
+		}
+
+		.move-on__svg {
+			transform: rotate(-360deg);
+		}
+	}
+
+	&:active {
+		.move-on__svg {
+			width: vh(13);
+			height: vh(9);
+		}
+	}
+
+	@include desktop {
+		border-width: 1px;
+	}
+
+	@include mobile {
+		border-width: vmin(0.65);
+	}
+}
+
+.move-on__btn--is-animate {
+	.move-on__svg,
+	&::before,
+	&::after {
+		opacity: 0;
+		transform: scale(0);
+	}
+}
+
+.move-on__svg {
+	margin-top: vh(2);
+	width: vh(14);
+	height: vh(10);
+	transition: transform 0.25s ease-in-out, opacity 0.25s;
+}
+
+.move-on__line {
+	position: absolute;
+	left: 50%;
+	width: vw(1);
+	background-color: rgba($color-white, 0.75);
+	transform: translateX(-50%);
+
+	@include desktop {
+		width: 1px;
+	}
+
+	@include mobile {
+		width: vmin(0.65);
+	}
+}
+
+.move-on__line--bottom {
+	bottom: 0;
+	height: vh(80);
+}
+
+.move-on__line--top {
+	bottom: vh(140);
+	height: vh(163);
+
+	@media (max-height: 720px) {
+		height: vh(100);
+	}
+}
+
+@media (max-height: 500px) and (min-width: 1025px) {
+	.move-on {
+		display: none;
+	}
+}

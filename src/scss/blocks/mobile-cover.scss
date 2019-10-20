@@ -1,0 +1,25 @@
+.mobile-cover {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	z-index: 30;
+	padding: vmin(15);
+	width: 100%;
+	background-color: rgba($color-black, 0.6);
+	transform: translateY(-50%);
+
+	@include mobile {
+		@include landscape {
+			display: none;
+		}
+	}
+}
+
+.mobile-cover__title {
+	margin: 0;
+	font-weight: 700;
+	font-size: vmin(14);
+	line-height: vmin(18);
+	letter-spacing: vmin(1);
+	text-align: center;
+}

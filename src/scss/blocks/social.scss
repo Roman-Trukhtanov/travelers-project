@@ -1,0 +1,105 @@
+.social {
+	position: absolute;
+	right: vw(80);
+	top: vh(354);
+
+	@include mobile {
+		@include landscape {
+			top: 55%;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+.social__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.social__item:not(:last-child) {
+	margin-bottom: vw(17);
+}
+
+.social__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: vw(0.85) solid $color-white;
+	border-radius: 50%;
+	width: vw(50);
+	height: vw(50);
+	color: $color-white;
+	transition-property: background-color, border, opacity;
+	transition-duration: 0.3s, 0.3s, 0.15s;
+	transition-timing-function: ease-in-out;
+
+	&:focus,
+	&:hover {
+		outline: none;
+		border-color: $color-white;
+		background-color: $color-white;
+
+		.social__link-svg--fb {
+			color: $color-fb;
+		}
+
+		.social__link-svg--vk {
+			color: $color-vk;
+		}
+
+		.social__link-svg--tg {
+			color: $color-tg;
+		}
+	}
+
+	&:active {
+		opacity: 0.8;
+
+		.social__link-svg {
+			transform: scale(0.85);
+		}
+	}
+}
+
+.social--is-animate .social__link {
+	animation: socialMove 0.8s ease-in-out 0s infinite alternate;
+	animation-play-state: running;
+
+	&:focus,
+	&:hover {
+		animation-play-state: paused;
+	}
+
+	.is-browser-ie & {
+		animation-duration: 1.2s;
+	}
+}
+
+.social__link-svg {
+	width: 55%;
+	height: auto;
+	max-height: 55%;
+	transition: color 0.3s;
+}
+
+.social__link-svg--fb {
+	width: vw(12);
+	height: vw(24);
+}
+
+.social__link-svg--vk {
+	width: vw(22);
+	height: vw(14);
+}
+
+.social__link-svg--tg {
+	width: vw(21);
+	height: vw(18);
+}
+
+@keyframes socialMove {
+	to {
+		transform: translateY(-20%);
+	}
+}

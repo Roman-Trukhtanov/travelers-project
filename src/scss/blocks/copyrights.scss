@@ -1,0 +1,41 @@
+.copyrights {
+	position: absolute;
+	left: vw(80);
+	top: vh(323);
+
+	.is-browser-edge &,
+	.is-browser-ie & {
+		left: vw(81);
+		top: vh(315);
+	}
+
+	@include mobile {
+		@include landscape {
+			top: 36%;
+		}
+	}
+}
+
+.copyrights__text {
+	margin: 0;
+	font-weight: 700;
+	font-size: vw(14);
+	line-height: vw(12);
+	writing-mode: vertical-lr;
+	transform: rotate(180deg);
+
+	.is-browser-ie &,
+	.is-browser-edge & {
+		height: vw(285);
+		text-align: center;
+	}
+}
+
+.copyrights__text-icon {
+	display: inline-block;
+	transform: rotate(90deg);
+
+	.is-browser-ie & {
+		margin-left: vw(-2);
+	}
+}

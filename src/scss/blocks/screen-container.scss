@@ -1,0 +1,25 @@
+.screen-container {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	height: 100%;
+	max-height: 100vh;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: -1;
+		background-color: rgba($color-black, 0.3);
+		pointer-events: none;
+	}
+
+	@include mobile {
+		@include portrait {
+			display: none;
+		}
+	}
+}

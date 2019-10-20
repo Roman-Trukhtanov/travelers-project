@@ -1,0 +1,13 @@
+.page-main__company,
+.page-main__copyrights,
+.page-main__social {
+	display: block;
+}
+
+@media (max-height: 500px) and (min-width: 1025px) {
+	.page-main__company,
+	.page-main__copyrights,
+	.page-main__social {
+		display: none;
+	}
+}

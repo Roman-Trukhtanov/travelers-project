@@ -1,1 +1,27 @@
 // stylelint-disable no-empty-source
+
+/* Open Sans */
+@font-face {
+	src: url("../fonts/open-sans-regular.woff2") format("woff2"), url("../fonts/open-sans-regular.woff") format("woff");
+	font-family: "Open Sans";
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/open-sans-bold.woff2") format("woff2"), url("../fonts/open-sans-bold.woff") format("woff");
+	font-family: "Open Sans";
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Bunny */
+@font-face {
+	src: url("../fonts/banny-bold-round.woff2") format("woff2"), url("../fonts/banny-bold-round.woff") format("woff");
+	font-family: "Bunny";
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}

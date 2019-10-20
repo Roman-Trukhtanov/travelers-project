@@ -6,4 +6,41 @@
 
 html {
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+// Дополнения к базовым стилям
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: $font-family-open-sans;
+	font-weight: 400;
+	font-size: vw(14);
+	line-height: vw(18);
+	color: $color-white;
+	background-image: url("/images/main-bg@2x.jpg");
+	background-position: center bottom;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: $main-bg-color;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+.visually-hidden {
+	@include visually-hidden;
+}
+
+.is-hidden {
+	display: none !important; // stylelint-disable-line declaration-no-important
 }

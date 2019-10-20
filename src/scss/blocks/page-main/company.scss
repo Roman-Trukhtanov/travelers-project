@@ -1,0 +1,61 @@
+.company {
+	position: absolute;
+	left: 0;
+	top: vh(326);
+	width: 100%;
+
+	@include mobile {
+		@include landscape {
+			top: 55%;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+.company__wrap {
+	position: relative;
+	margin: 0 auto;
+	width: vw(600);
+}
+
+.company__text {
+	margin: 0;
+	margin-bottom: vw(6);
+	font-size: vw(12);
+	line-height: vw(14);
+	letter-spacing: vw(6);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.company__name {
+	margin: 0;
+	margin-bottom: vw(5);
+	font-family: $font-family-bunny;
+	font-weight: 700;
+	font-size: vw(96);
+	line-height: vw(120);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.company__line-decor {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: vw(30);
+	width: vw(60);
+	height: vw(5);
+	background-color: $color-corn;
+}
+
+.company__buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: vw(440);
+}
+
+.company__button-wrap {
+	margin-bottom: vw(40);
+}

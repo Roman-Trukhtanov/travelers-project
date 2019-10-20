@@ -1,0 +1,49 @@
+.button {
+	position: relative;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	border: 1px solid rgba($color-white, 0.75);
+	padding: vw(20) vw(40);
+	width: vw(200);
+	max-width: vw(300);
+	font-weight: 700;
+	font-size: vw(12);
+	line-height: vw(20);
+	text-transform: uppercase;
+	color: $color-white;
+	cursor: pointer;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		z-index: -1;
+		display: block;
+		border-radius: 50%;
+		width: 0;
+		height: 0;
+		background-color: $color-corn;
+		transform: translate(-50%, -50%);
+		transition-property: width, height;
+		transition-duration: 0.25s;
+		transition-timing-function: ease-in-out;
+	}
+
+	&:focus,
+	&:hover {
+		outline: none;
+
+		&::before {
+			width: vw(300);
+			height: vw(300);
+		}
+	}
+
+	&:active {
+		font-size: vw(11);
+	}
+}
