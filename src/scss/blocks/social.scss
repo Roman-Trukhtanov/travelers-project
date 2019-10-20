@@ -9,6 +9,10 @@
 			transform: translateY(-50%);
 		}
 	}
+
+	@include desktop-lg {
+		top: vh(345);
+	}
 }
 
 .social__list {
